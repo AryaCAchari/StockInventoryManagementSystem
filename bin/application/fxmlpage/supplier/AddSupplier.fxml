@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="602.0" style="-fx-border-color: Fuchsia; -fx-border-insets: 0; -fx-border-width: 5; -fx-border-style: solid; -fx-background-color: #F6F2F7;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.supplier.AddSupplierController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="590.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="170.0" text="Add Supplier" textAlignment="CENTER" textFill="TEAL" HBox.hgrow="NEVER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <JFXTextField fx:id="supplierName" focusColor="#ada1ac00" prefHeight="41.0" prefWidth="590.0" promptText="Supplier Name" unFocusColor="#afa1ad" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <effect>
+            <ColorAdjust brightness="-1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="mobileNumber" focusColor="#ada1ac00" layoutX="15.0" layoutY="55.0" prefHeight="41.0" prefWidth="590.0" promptText="Mobile Number" unFocusColor="#afa1ad" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <effect>
+            <ColorAdjust brightness="-1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="landlineNumber" focusColor="#ada1ac00" layoutX="15.0" layoutY="96.0" prefHeight="41.0" prefWidth="590.0" promptText="Land Line Number" unFocusColor="#afa1ad" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <effect>
+            <ColorAdjust brightness="-1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextArea fx:id="address" focusColor="#405aa800" promptText="Address" unFocusColor="#979696" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <effect>
+            <ColorAdjust brightness="-1.0" />
+         </effect>
+      </JFXTextArea>
+      <HBox prefHeight="14.0" prefWidth="590.0" VBox.vgrow="NEVER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Region>
+            <Button fx:id="saveSupplier" mnemonicParsing="false" onAction="#saveSupplieretails" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #3BCEBF;" text="SAVE">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clearFeilds" mnemonicParsing="false" onAction="#refreshOrClearScreen" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #F5B7D6;" text="CANCEL">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="592.0" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="backbutton" mnemonicParsing="false" onAction="#gobacktoPreviousStage" prefWidth="104.0" style="-fx-background-color: #9CBEE3;" text="BACK" HBox.hgrow="NEVER" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

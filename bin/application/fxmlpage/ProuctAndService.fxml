@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ProuctAndServiceController">
+   <children>
+      <HBox prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #7b3dd1;">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="80.0" prefWidth="61.0">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo-H1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="11.0" />
+               </padding>
+            </Label>
+            <VBox prefHeight="80.0" prefWidth="134.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="134.0" text="Hussnain" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="134.0" text="Computer Center" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="NEVER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <JFXButton fx:id="logoutButton1" layoutX="86.0" layoutY="5.0" onAction="#logoutFromTheSystem" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #9782ED;" text="Logout" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></JFXButton>
+                  <Label fx:id="currentDate" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="18.0" layoutY="40.0" prefHeight="21.0" prefWidth="168.0" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.topAnchor="41.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="386.0" prefWidth="200.0" style="-fx-background-color: #262e42;">
+               <children>
+                  <JFXButton onAction="#goTodashboardSection" prefHeight="35.0" prefWidth="200.0" text="   DASHBOARD" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@house-xl.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="64.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="stockNavigator" onAction="#gotoStockSection" prefHeight="35.0" prefWidth="200.0" text="   STOCKS" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Stocks.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="92.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton onAction="#goToSalesSection" prefHeight="35.0" prefWidth="200.0" text="   BILLING/SALES" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@billingSales.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="53.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="supplierNavigator" onAction="#gotoSupplierSection" prefHeight="35.0" prefWidth="200.0" text="   SUPPLIER" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@supplierTwo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="82.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="brandButton" onAction="#gotoBrandButton" prefHeight="35.0" prefWidth="200.0" text="   BRANDS" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@brand.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="89.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="categoryNavigory" onAction="#gotoCategorySection" prefHeight="35.0" prefWidth="200.0" text="   CATEGORY" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@category.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="73.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="377.0" prefWidth="505.0" style="-fx-background-color: #E4F6CB;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="504.0" text="Brand" textAlignment="JUSTIFY">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="brandTable" prefHeight="154.0" prefWidth="504.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="brandName" prefWidth="400.0" text="Brand" />
+                      <TableColumn fx:id="brandCount" prefWidth="400.0" text="Count" />
+                        <TableColumn fx:id="brandDate" prefWidth="400.0" text="Date" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="504.0" text="Category">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <TableView fx:id="ctaegoryTable" layoutX="10.0" layoutY="54.0" prefHeight="154.0" prefWidth="504.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="categoryName" prefWidth="400.0" text="Category" />
+                        <TableColumn fx:id="categoryCount" prefWidth="400.0" text="Count" />
+                        <TableColumn fx:id="categotySoldDate" prefWidth="400.0" text="Date" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="202.0" prefHeight="38.0" prefWidth="504.0" text="Product">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
+                  <TableView fx:id="productTable" layoutX="10.0" layoutY="237.0" prefHeight="154.0" prefWidth="504.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="modelName" prefWidth="295.0" text="Model" />
+                        <TableColumn fx:id="modelBrand" prefWidth="295.0" text="Brand" />
+                        <TableColumn fx:id="modelCount" prefWidth="295.0" text="Count" />
+                        <TableColumn fx:id="modelDate" prefWidth="295.0" text="Date" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="703.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <JFXButton fx:id="bckbutton" onAction="#gotoPreviousSection" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #A6A4EA;" text="Back" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="175.0" text="Powered by: TechiesTalk" textAlignment="JUSTIFY">
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

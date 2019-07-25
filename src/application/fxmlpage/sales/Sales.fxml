@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.sales.SalesController">
+   <children>
+      <HBox prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #7b3dd1;">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="80.0" prefWidth="61.0">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo-H1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="11.0" />
+               </padding>
+            </Label>
+            <VBox prefHeight="80.0" prefWidth="134.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="134.0" text="Hussnain" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="134.0" text="Computer Center" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="NEVER">
+               <children>
+                  <JFXButton fx:id="logoutButton" layoutX="82.0" layoutY="7.0" onAction="#logoutFromSystem" prefHeight="36.0" prefWidth="107.0" ripplerFill="#fffffff2" style="-fx-background-color: #9782ED;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <Label fx:id="currentDate" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="43.0" prefHeight="36.0" prefWidth="180.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="271.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="273.0" prefWidth="213.0" HBox.hgrow="NEVER">
+               <children>
+                  <HBox prefHeight="43.0" prefWidth="213.0">
+                     <children>
+                        <TextField fx:id="typeProductname" prefHeight="43.0" prefWidth="165.0" />
+                        <JFXButton fx:id="searchButton" alignment="CENTER" contentDisplay="CENTER" onAction="#searchProductName" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #6926c7;" text=" ">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@search-9-xl.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="productView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E6E6FA;" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="productName" prefWidth="137.0" text="PRODUCT NAME" />
+                        <TableColumn fx:id="totalQuantity" prefWidth="32.0" text="Qnt" />
+                        <TableColumn fx:id="pricePerUnit" prefWidth="43.0" text="Rs" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                              <MenuItem fx:id="selectRaw" mnemonicParsing="false" onAction="#onSelectProductRaw" text="Select" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="165.0" style="-fx-background-color: #D4FCF6;" VBox.vgrow="NEVER">
+                     <children>
+                        <TextField fx:id="productNameTextField" promptText="Product Name">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="brandTextField" layoutX="20.0" layoutY="23.0" promptText="Product Brand">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="priceTextField" layoutX="20.0" layoutY="23.0" promptText="Price per Unit">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="quantityTextField" layoutX="20.0" layoutY="23.0" promptText="Quantity">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <JFXButton onAction="#onCalculateAmountAndSaveData" prefHeight="25.0" prefWidth="80.0" ripplerFill="#dd0d0d" style="-fx-background-color: white;" text="ADD" textAlignment="JUSTIFY" textFill="#eb0c0c">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="salesDetailsTable" onKeyPressed="#calculateBalnceAmountToUser" prefHeight="290.0" prefWidth="569.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="commadityName" prefWidth="200.0" text="Poduct Name" />
+                      <TableColumn fx:id="productCode" prefWidth="200.0" text="Product Code" />
+                        <TableColumn fx:id="productModel" prefWidth="200.0" text="Product Model" />
+                        <TableColumn fx:id="productBrand" prefWidth="200.0" text="Brand" />
+                        <TableColumn fx:id="productQuantity" prefWidth="120.0" text="Quantity" />
+                        <TableColumn fx:id="price" prefWidth="127.0" text="Price/Unit" />
+                        <TableColumn fx:id="amount" prefWidth="120.0" text="Amount" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="121.0" prefWidth="530.0" style="-fx-background-color: #E6E6FA;" VBox.vgrow="NEVER">
+                     <children>
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <AnchorPane prefHeight="100.0" prefWidth="247.0">
+                           <children>
+                              <Label layoutX="18.0" layoutY="15.0" prefHeight="30.0" prefWidth="63.0" text="Total: ">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="totalAmount" layoutX="95.0" layoutY="15.0" prefHeight="30.0" prefWidth="195.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <Label layoutX="18.0" layoutY="50.0" prefHeight="30.0" prefWidth="63.0" text="Paid: ">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="userPaidAmout" layoutX="95.0" layoutY="50.0" prefHeight="30.0" prefWidth="195.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <Label layoutX="18.0" layoutY="86.0" prefHeight="30.0" prefWidth="63.0" text="Balance: ">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="balanceToUser" layoutX="95.0" layoutY="86.0" prefHeight="30.0" prefWidth="140.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <JFXButton fx:id="balanceCalculator" layoutX="235.0" layoutY="85.0" onAction="#calculateBalnceAmountToUser" prefHeight="30.0" prefWidth="52.0" ripplerFill="#d81c7af2" style="-fx-background-color: #DD9CB7;" text="Calci" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="530.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER">
+                     <children>
+                        <JFXButton fx:id="saveBill" buttonType="RAISED" onAction="#saveSalesDetails" prefHeight="41.0" prefWidth="116.0" ripplerFill="#13d1aef2" style="-fx-background-color: #bdf2c0;" text="SAVE" HBox.hgrow="NEVER">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelSales" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#refreshAndCancelSales" prefHeight="41.0" prefWidth="116.0" ripplerFill="#e02b31f2" style="-fx-background-color: #87CEEB;" text="CANCEL" HBox.hgrow="NEVER">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #DCDCDC;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <JFXButton fx:id="goBack" onAction="#goBacktoProductServicePage" prefHeight="35.0" prefWidth="89.0" ripplerFill="#2c7a1ff2" style="-fx-background-color: #A6A4EA;" text="BACK">
+               <HBox.margin>
+                  <Insets left="6.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="201.0" text="Powerd By: TechiesTalk" textAlignment="JUSTIFY">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

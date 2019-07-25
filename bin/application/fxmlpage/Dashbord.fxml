@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DashbordController">
+	<children>
+		<HBox prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
+			<children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="100.0" prefWidth="67.0" style="-fx-background-color: #7b3dd1;">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo-H1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <VBox prefHeight="75.0" prefWidth="151.0" style="-fx-background-color: #7b3dd1;">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="225.0" text="Hussnain" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="225.0" text="Computer Center" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets left="6.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+				<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7b3dd1;" HBox.hgrow="ALWAYS" />
+				<AnchorPane prefHeight="200.0" prefWidth="200.0">
+					<children>
+						<VBox alignment="TOP_RIGHT" layoutX="14.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #7b3dd1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<children>
+								<JFXButton fx:id="logoutButton" buttonType="RAISED" onAction="#logoutfromSystem" prefHeight="36.0" prefWidth="95.0" text="Logout" textFill="WHITE">
+									<ripplerFill>
+										<RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+											<stops>
+												<Stop color="#e11313cc" />
+												<Stop color="WHITE" offset="1.0" />
+											</stops>
+										</RadialGradient>
+									</ripplerFill>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+								</JFXButton>
+								<Label fx:id="curretenDate" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="16.0" prefWidth="180.0" textFill="WHITE" VBox.vgrow="ALWAYS">
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+									<padding>
+										<Insets right="10.0" />
+									</padding>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+								</Label>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+					</children>
+				</AnchorPane>
+			</children>
+		</HBox>
+		<HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+			<children>
+				<VBox prefHeight="435.0" prefWidth="757.0" HBox.hgrow="ALWAYS">
+					<children>
+						<HBox prefHeight="438.0" prefWidth="757.0" VBox.vgrow="ALWAYS">
+							<children>
+                        <VBox prefHeight="200.0" prefWidth="219.0" style="-fx-background-color: #262e42;">
+                           <children>
+                              <JFXButton fx:id="dashboardNavigator" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="219.0" text="   DASHBOARD" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@house-xl.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets top="4.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="94.0" />
+                                 </padding>
+                              </JFXButton>
+												<JFXButton fx:id="stocksNavigator" onAction="#gotoStockSection" prefHeight="35.0" prefWidth="219.0" text="   STOCK" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Stocks.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="127.0" />
+                                 </padding>
+                              </JFXButton>
+												<JFXButton fx:id="brandNavigator" onAction="#gotoBrandSection" prefHeight="35.0" prefWidth="219.0" text="   BRAND" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@brand.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="120.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton fx:id="categoryNavigator" onAction="#goToCategorySection" prefHeight="35.0" prefWidth="219.0" text="   CATEGORY" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@category.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="100.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton fx:id="supplierNavigator" onAction="#goToSupplierSection" prefHeight="35.0" prefWidth="219.0" text="   SUPPLIER" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@supplierTwo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="111.0" />
+                                 </padding>
+                              </JFXButton>
+												<JFXButton fx:id="billingNavigator" onAction="#gotoSalesSection" prefHeight="35.0" prefWidth="219.0" text="   BILLING/SALES" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@billingSales.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="82.0" />
+                                 </padding>
+                              </JFXButton>
+												<JFXButton fx:id="productSerrvice" onAction="#gotoProductAndServices" prefHeight="35.0" prefWidth="219.0" text="   REPORT" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@report-xl.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="119.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children></VBox>
+								<VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #e6e6e6;" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="538.0" style="-fx-background-color: #ffffff;" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label contentDisplay="CENTER" maxWidth="539.0" prefHeight="46.0" prefWidth="138.0" text="DASHBOARD" textAlignment="JUSTIFY">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="66.0" prefWidth="200.0" style="-fx-background-color: #e6e6e6;">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="20.0" right="10.0" top="18.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label fx:id="cpuImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #592d96;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@cpu-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #7b3dd1;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="CPU" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countOne" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="monitorImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #388ec7;" textAlignment="CENTER">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@monitor-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #4db8ff;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="MONITOR" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countTwo" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="keyImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #e39229;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@keyboard-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #f2a035;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="KEYBOARD" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countThree" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="mouseImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #d92929;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@mouse-3-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #f24444;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="MOUSE" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countfour" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="dvdImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #048f75;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@dvd-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #02CFA9;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="DVD" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countFive" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="74.0" prefHeight="66.0" prefWidth="200.0" style="-fx-background-color: #e6e6e6;">
+                                 <children>
+                                    <Label fx:id="cdImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #7b3dd1;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@compact-disc-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #ffffff;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="CD" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countSix" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="hddImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #4db8ff;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@hdd-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="HDD" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countSeven" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="usbImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f2a035;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@usb-2-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="USB" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countEight" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="hdmiImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #f24444;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@hdmi-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="HDMI CABLE" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countNine" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="dataImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #02CFA9;" textAlignment="CENTER">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@network-cable-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="DATACABLES" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countTen" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="74.0" prefHeight="66.0" prefWidth="200.0" style="-fx-background-color: #e6e6e6;">
+                                 <children>
+                                    <Label fx:id="cableImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #592d96;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@wired-network-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #7b3dd1;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="CABLES" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countEleven" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="headImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #388ec7;" textAlignment="CENTER">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@headphones-8-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #4db8ff;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="HEADPHONE" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countTwelv" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="powerImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #e39229;" textAlignment="CENTER">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@power%20bank.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #f2a035;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="POWER BANK" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countThirteen" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="printerImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #d92929;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@printer-5-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #f24444;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="PRINTER" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countFourteen" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="scannerImage" alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #048f75;">
+                                       <graphic>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@scanner-xl.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding></Label>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: #02CFA9;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" text="SCANNER" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="countFifteen" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0" textAlignment="JUSTIFY" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="productName" prefWidth="330.0" text="Product Name" />
+                                  <TableColumn fx:id="modelName" minWidth="0.0" prefWidth="330.0" text="Model" />
+                                    <TableColumn fx:id="brandName" minWidth="0.0" prefWidth="330.0" text="Brand" />
+                                    <TableColumn fx:id="qunatity" prefWidth="63.0" text="Quantity" />
+                                    <TableColumn fx:id="price" prefWidth="67.0" text="Price" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="10.0" top="6.0" />
+                                 </VBox.margin>
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem fx:id="refreshPage" mnemonicParsing="false" onAction="#onRefershTableAndPage" text="Refresh" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                           </children>
+								</VBox>
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+		<HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="569.0" VBox.vgrow="NEVER">
+			<children>
+            <Label prefHeight="41.0" prefWidth="219.0" style="-fx-background-color: #262e42;" HBox.hgrow="NEVER" />
+            <Region prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #e6eaf5;" HBox.hgrow="ALWAYS" />
+				<Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #e6eaf5;" text="Powerd By: TechiesTalk" textAlignment="JUSTIFY">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<padding>
+						<Insets right="10.0" />
+					</padding>
+				</Label>
+			</children>
+		</HBox>
+	</children>
+</VBox>
